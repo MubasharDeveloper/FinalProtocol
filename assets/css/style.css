@@ -1077,7 +1077,7 @@ header .inner-header .header-content {
         display: flex;
         position: relative;
         overflow: visible;
-        animation: rotateYBounce 4s infinite ease-in-out;
+        animation: rotateYBounce 16s infinite ease-in-out;
         transform-style: preserve-3d;
 
         & .sliding-content {
@@ -1268,7 +1268,33 @@ header .inner-header .header-content {
                 }
             }
 
-            & .sub-title {}
+            & .sub-title {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                outline: none;
+
+                user-select: none;
+                word-break: break-word;
+                word-wrap: break-word;
+                z-index: 1;
+                flex: none;
+                width: 174px;
+                height: auto;
+                position: absolute;
+                top: 84%;
+                left: 45%;
+                transform: translate(-50%, -50%);
+
+                & p {
+                    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+                    font-size: 10px;
+                    letter-spacing: -0.5px;
+                    line-height: 140%;
+                    text-align: center;
+                    color: var(--token-59e77027-930e-45f7-94aa-a8ffadf9e382, rgb(255, 255, 255));
+                }
+            }
 
 
         }
@@ -1290,7 +1316,7 @@ header .inner-header .header-content {
             mask-position: center;
             mask-size: contain;
             mask-repeat: no-repeat;
-            /* background: red; */
+            background: #0005;
 
             & .layer-1 {
                 mix-blend-mode: overlay;
@@ -1317,5 +1343,28 @@ header .inner-header .header-content {
                 }
             }
         }
+    }
+}
+
+
+.bottom-bar {
+    z-index: 1;
+    flex-flow: row;
+    flex: none;
+    place-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: min-content;
+    padding: 0;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    & .bottom-inner-layer {
+        image-rendering: pixelated;
+        flex-shrink: 0;
+        fill: rgba(0, 0, 0, 1);
+        color: rgba(0, 0, 0, 1);
     }
 }

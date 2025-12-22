@@ -1233,8 +1233,8 @@ header .inner-header .header-content {
 
                 & p {
                     font-family: "Instrument Serif", "Instrument Serif Placeholder", serif;
-                    font-size: 40px;
-                    line-height: 0.9em;
+                    font-size: 28px;
+                    line-height: 1em;
                     text-align: center;
                     color: rgb(255, 255, 255);
                 }
@@ -1708,108 +1708,263 @@ header .inner-header .header-content {
                                     justify-content: center;
                                     align-items: center;
 
-                                    & iframe {
+                                    & .frame-inner-section {
                                         width: 100%;
                                         height: 100%;
+
+
+                                        & .steps {
+                                            width: 100%;
+                                            height: 100%;
+                                            display: none;
+                                            flex-direction: column;
+
+                                            &.active {
+                                                display: flex;
+                                            }
+
+                                            & .frame-content-section {
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: space-between;
+                                                padding: 32px;
+
+                                                & .form-title {
+                                                    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+                                                    font-size: 20px;
+                                                    font-weight: 600;
+                                                    letter-spacing: -.2px;
+                                                    line-height: 26px;
+                                                    color: #fff;
+                                                }
+
+                                                & .sub-title {
+                                                    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+                                                    font-size: 15px;
+                                                    font-weight: 400;
+                                                    letter-spacing: -.2px;
+                                                    line-height: 26px;
+                                                    color: #dedede;
+                                                }
+
+                                                & input.form-item {
+                                                    margin-top: 36px;
+                                                    font-size: 20px;
+                                                    background: #0000;
+                                                    border: none;
+                                                    box-shadow: none;
+                                                    border-bottom: 2px solid #878787;
+                                                    width: 100%;
+                                                    padding: 8px 14px;
+                                                    font-weight: 500;
+                                                    color: #fff;
+
+                                                    &:focus {
+                                                        box-shadow: none;
+                                                        outline: none;
+                                                        border-bottom: 2px solid #fff;
+                                                    }
+                                                }
+
+                                                & .form-label {
+                                                    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+                                                    display: flex;
+                                                    padding: 12px;
+                                                    border-radius: 6px;
+                                                    font-size: 18px;
+                                                    justify-content: flex-start;
+                                                    align-items: center;
+                                                    gap: 8px;
+                                                    color: #fff;
+                                                    cursor: pointer;
+                                                    border: 1px solid #3e3e3e;
+                                                    margin-bottom: 8px;
+                                                    position: relative;
+                                                    background: #000;
+
+
+                                                    & input {
+                                                        position: absolute;
+                                                        z-index: -1;
+                                                    }
+
+
+                                                    & .icon {
+                                                        width: 20px;
+                                                        height: 20px;
+                                                        border-radius: 4px;
+                                                        font-size: 14px;
+                                                        text-transform: uppercase;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        border: 1px solid #3e3e3e;
+                                                        background-color: #000;
+                                                        color: #fff;
+                                                    }
+
+
+                                                    &:hover {
+                                                        border: 1px solid #6c6b6b;
+
+                                                        & .icon {
+                                                            border: 1px solid #3e3e3e;
+                                                        }
+                                                    }
+
+                                                    &:has(input:checked) {
+                                                        border: 2px solid #fff;
+
+                                                        & .icon {
+                                                            background-color: #fff;
+                                                            color: #000;
+                                                        }
+                                                    }
+
+                                                }
+
+                                                .mt-36 {
+                                                    margin-top: 36px;
+                                                }
+                                            }
+
+                                            .btn {
+                                                display: flex;
+                                                gap: 8px;
+                                            }
+
+                                            & button {
+                                                border: none !important;
+                                                padding: 10px 16px;
+                                                border-radius: 6px;
+                                                background: #0aa7ee;
+                                                color: #fff;
+                                                font-size: 20px;
+                                                font-weight: 400;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                cursor: pointer;
+                                                width: 100%;
+
+                                                &:hover {
+                                                    background: #078cc9;
+                                                }
+
+                                                &.back-btn {
+                                                    padding: 10px;
+                                                    width: fit-content;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    & img {
+                                        width: 100%;
+                                        aspect-ratio: 16/9;
+                                        object-fit: cover;
                                     }
                                 }
                             }
                         }
                     }
-
-                    & .bottom-content {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        outline: none;
-
-                        word-break: break-word;
-                        word-wrap: break-word;
-                        z-index: 1;
-                        flex: none;
-                        width: 100%;
-                        height: auto;
-                        position: relative;
-
-                        transform: none;
-                        align-items: center;
-
-                        & p {
-                            font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
-                            font-size: 12px;
-                            font-weight: 400;
-                            letter-spacing: -.5px;
-                            line-height: 140%;
-                            color: #fff;
-                        }
-                    }
                 }
-            }
 
-            & .bg-video {
-                will-change: transform;
-                z-index: 0;
-                border-radius: 20px;
-                flex-flow: row;
-                flex: none;
-                place-content: flex-end center;
-                align-items: flex-end;
-                gap: 10px;
-                width: 100%;
-                height: 100%;
-                padding: 0;
-                display: flex;
-                position: absolute;
-                top: 0;
-                left: 0%;
-                overflow: hidden;
+                & .bottom-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    outline: none;
 
-                & .inner-video {
-                    filter: hue-rotate(303deg);
-                    will-change: var(--framer-will-change-effect-override, transform);
+                    word-break: break-word;
+                    word-wrap: break-word;
                     z-index: 1;
                     flex: none;
                     width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0%;
-                    left: 0%;
+                    height: auto;
+                    position: relative;
 
-                    opacity: 1;
                     transform: none;
-                    will-change: transform;
+                    align-items: center;
 
-                    & video {
-                        cursor: auto;
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 0px;
-                        display: block;
-                        object-fit: cover;
-                        background-color: rgba(0, 0, 0, 0);
-                        object-position: 50% 50%;
+                    & p {
+                        font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+                        font-size: 12px;
+                        font-weight: 400;
+                        letter-spacing: -.5px;
+                        line-height: 140%;
+                        color: #fff;
                     }
                 }
             }
+        }
 
-            &::after {
-                content: "";
-                border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0);
-                border-color: var(--border-color, none);
-                border-style: var(--border-style, none);
-                box-sizing: border-box;
-                border-radius: inherit;
-                corner-shape: inherit;
-                pointer-events: none;
+        & .bg-video {
+            will-change: transform;
+            z-index: 0;
+            border-radius: 20px;
+            flex-flow: row;
+            flex: none;
+            place-content: flex-end center;
+            align-items: flex-end;
+            gap: 10px;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0%;
+            overflow: hidden;
+
+            & .inner-video {
+                filter: hue-rotate(303deg);
+                will-change: var(--framer-will-change-effect-override, transform);
+                z-index: 1;
+                flex: none;
                 width: 100%;
                 height: 100%;
                 position: absolute;
-                top: 0;
-                left: 0;
+                top: 0%;
+                left: 0%;
+
+                opacity: 1;
+                transform: none;
+                will-change: transform;
+
+                & video {
+                    cursor: auto;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0px;
+                    display: block;
+                    object-fit: cover;
+                    background-color: rgba(0, 0, 0, 0);
+                    object-position: 50% 50%;
+                }
             }
+        }
+
+        &::after {
+            content: "";
+            border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0);
+            border-color: var(--border-color, none);
+            border-style: var(--border-style, none);
+            box-sizing: border-box;
+            border-radius: inherit;
+            corner-shape: inherit;
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     }
 }
+
 
 .faq-section {
     padding: 40px 0 0;
